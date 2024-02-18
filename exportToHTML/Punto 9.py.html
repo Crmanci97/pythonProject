@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Punto 9.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Punto 9.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">random</span>
+
+<span class="s0">def </span><span class="s1">generar_matriz</span><span class="s2">(</span><span class="s1">filas</span><span class="s2">, </span><span class="s1">columnas</span><span class="s2">, </span><span class="s1">rango_inicio</span><span class="s2">, </span><span class="s1">rango_fin</span><span class="s2">):</span>
+
+    <span class="s1">matriz </span><span class="s2">= [[</span><span class="s1">random</span><span class="s2">.</span><span class="s1">randint</span><span class="s2">(</span><span class="s1">rango_inicio</span><span class="s2">, </span><span class="s1">rango_fin</span><span class="s2">) </span><span class="s0">for </span><span class="s1">_ </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s1">columnas</span><span class="s2">)] </span><span class="s0">for </span><span class="s1">_ </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s1">filas</span><span class="s2">)]</span>
+    <span class="s0">return </span><span class="s1">matriz</span>
+
+<span class="s0">def </span><span class="s1">imprimir_matriz</span><span class="s2">(</span><span class="s1">matriz</span><span class="s2">):</span>
+
+    <span class="s0">for </span><span class="s1">fila </span><span class="s0">in </span><span class="s1">matriz</span><span class="s2">:</span>
+        <span class="s1">print</span><span class="s2">(</span><span class="s3">&quot; &quot;</span><span class="s2">.</span><span class="s1">join</span><span class="s2">(</span><span class="s1">map</span><span class="s2">(</span><span class="s1">str</span><span class="s2">, </span><span class="s1">fila</span><span class="s2">)))</span>
+
+<span class="s1">filas </span><span class="s2">= </span><span class="s1">int</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">&quot;Ingrese el número de filas de la matriz: &quot;</span><span class="s2">))</span>
+<span class="s1">columnas </span><span class="s2">= </span><span class="s1">int</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">&quot;Ingrese el número de columnas de la matriz: &quot;</span><span class="s2">))</span>
+<span class="s1">rango_inicio </span><span class="s2">= </span><span class="s1">int</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">&quot;Ingrese el valor mínimo para los números aleatorios: &quot;</span><span class="s2">))</span>
+<span class="s1">rango_fin </span><span class="s2">= </span><span class="s1">int</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">&quot;Ingrese el valor máximo para los números aleatorios: &quot;</span><span class="s2">))</span>
+
+<span class="s1">matriz </span><span class="s2">= </span><span class="s1">generar_matriz</span><span class="s2">(</span><span class="s1">filas</span><span class="s2">, </span><span class="s1">columnas</span><span class="s2">, </span><span class="s1">rango_inicio</span><span class="s2">, </span><span class="s1">rango_fin</span><span class="s2">)</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Matriz generada:&quot;</span><span class="s2">)</span>
+<span class="s1">imprimir_matriz</span><span class="s2">(</span><span class="s1">matriz</span><span class="s2">)</span></pre>
+</body>
+</html>
